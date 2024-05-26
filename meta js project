@@ -1,0 +1,31 @@
+
+let nfts=[];
+function mintNFT(name,state,post,income)
+{
+    const nft=
+    {
+        name: name,
+        state:state,
+        post: post,
+        income: income
+    };
+     nfts.push(nft);
+}
+function listNFT()
+{
+    for(i=0;i<nfts.length;i++)
+  {
+     console.log(`name: ${nfts[i].name},state: ${nfts[i].state}, post: ${nfts[i].post}, income: ${nfts[i].income}`);
+   }
+}
+function getTotalSupply(){
+    return nfts.length;
+}
+mintNFT("Annmol","Mohali","COO",1200000);
+mintNFT("Mannat","Chandigarh","CEO",100000);
+mintNFT("Sohan","Bihar","Manager",100000);
+mintNFT("Shyam","Rajasthan","Supervisor",200000);
+listNFT();
+console.log("total no. of supplies "  + getTotalSupply());
+
+
